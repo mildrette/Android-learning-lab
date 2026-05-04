@@ -34,7 +34,7 @@ Started: March 31, 2026 — Bamenda, Cameroon
 - [ ] Phase 2 — Jetpack Compose UI
 - [ ] Phase 3 — State and Navigation
 - [ ] Phase 4 — Database and APIs
-- [ ] Phase 5 — First app on Play Store
+- [ ] Phase 5 — First app
 
 ---
 
