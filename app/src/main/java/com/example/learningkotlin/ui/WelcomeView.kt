@@ -55,7 +55,8 @@ fun WelcomeView() {
             TextButton(onClick = {}) { Text("Text Button") }
         }
     }
-    Row() {
+    Column {
+        Text("Welcome to My Todo list App")
         ProfileCard()
     }
 
@@ -63,7 +64,7 @@ fun WelcomeView() {
 
 @Composable
 fun ProfileCard() {
-    Row(modifier = Modifier
+    Column(modifier = Modifier
         .padding(16.dp)){
 Text("First Mini Project week 1")
 
