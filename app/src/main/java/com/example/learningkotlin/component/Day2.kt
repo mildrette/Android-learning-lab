@@ -6,25 +6,35 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
+
 
 @Composable
 fun Day2(){
     val greetings = "Hello there"
     val myName = "my name is Astrid"
     val myJob = "i work as a Cook"
-    var mood = "i am energized nd building my future"
-    mood = "I am tired, so tired"
+//    var mood = "i am energized nd building my future"
+//    mood = "I am tired, so tired"
+
+    var mood by remember { mutableStateOf("I am tired, so tired")}
 
     val name = "Astrid"
     val age = 31
     val myHeight =1.6
     val amIHappy = false
+
+
 
     Row(modifier = Modifier.fillMaxSize().padding(16.dp)) {
         Column(modifier = Modifier.background(Color.Gray).padding(16.dp)) {
@@ -34,7 +44,13 @@ fun Day2(){
             Spacer(modifier = Modifier.padding(4.dp))
             Text(myJob, color = Color.White)
             Spacer(modifier = Modifier.padding(4.dp))
-            Text(mood, color = Color.White)
+            Button( onClick = {
+                mood = if (mood == "I am tired, so tired") {
+                    "I am energized and building my Future"
+                } else {
+                    "I am tired, So tired"
+                }
+            }) { Text("Change my Mood")}
 
 
         }
