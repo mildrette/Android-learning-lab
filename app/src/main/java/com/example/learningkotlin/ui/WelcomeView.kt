@@ -54,8 +54,30 @@ fun WelcomeView() {
 
             TextButton(onClick = {}) { Text("Text Button") }
         }
+    }
+    Row() {
+        ProfileCard()
+    }
+
+}
+
+@Composable
+fun ProfileCard() {
+    Row(modifier = Modifier
+        .padding(16.dp)){
+Text("First Mini Project week 1")
+
+        Text("Name: Mildred")
+
+        Spacer(modifier = Modifier.padding(10.dp))
+        Text("Role: Android App Dev")
+
+        Spacer(modifier = Modifier.padding(10.dp))
+        Text("City: Bamenda")
+
 
     }
+
 }
 
 @Preview
